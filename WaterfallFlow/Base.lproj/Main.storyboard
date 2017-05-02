@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SBk-Vc-CZL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aMS-Ol-xC7">
+            <objects>
+                <collectionViewController id="SBk-Vc-CZL" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nlM-TL-B0Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hNn-an-7gU" customClass="DMWaterfallFlowLayout">
+                            <size key="itemSize" width="154" height="188"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellCache" id="AjE-yi-bBd" userLabel="CellCache" customClass="DMWaterfallFlowCell">
+                                <rect key="frame" x="0.0" y="0.0" width="154" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="154" height="188"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Pw-u1-of9">
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="188"/>
+                                        </imageView>
+                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJU-lz-7lU">
+                                            <rect key="frame" x="0.0" y="163" width="154" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVY-Ue-KTF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="154" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="GVY-Ue-KTF" firstAttribute="leading" secondItem="BJU-lz-7lU" secondAttribute="leading" id="4YI-sE-OEV"/>
+                                                <constraint firstAttribute="height" constant="25" id="E0T-pj-hwp"/>
+                                                <constraint firstAttribute="bottom" secondItem="GVY-Ue-KTF" secondAttribute="bottom" id="Sqy-Bb-0TK"/>
+                                                <constraint firstItem="GVY-Ue-KTF" firstAttribute="top" secondItem="BJU-lz-7lU" secondAttribute="top" id="poL-32-Qtr"/>
+                                                <constraint firstAttribute="trailing" secondItem="GVY-Ue-KTF" secondAttribute="trailing" id="uXA-oi-tqX"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Pw-u1-of9" secondAttribute="trailing" id="7Hh-FH-Qbr"/>
+                                    <constraint firstAttribute="trailing" secondItem="BJU-lz-7lU" secondAttribute="trailing" id="Ir1-G6-INl"/>
+                                    <constraint firstItem="1Pw-u1-of9" firstAttribute="top" secondItem="AjE-yi-bBd" secondAttribute="top" id="JlI-ad-YXT"/>
+                                    <constraint firstAttribute="bottom" secondItem="BJU-lz-7lU" secondAttribute="bottom" id="Q6X-zq-8J1"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Pw-u1-of9" secondAttribute="bottom" id="Yoj-IR-GFp"/>
+                                    <constraint firstItem="1Pw-u1-of9" firstAttribute="leading" secondItem="AjE-yi-bBd" secondAttribute="leading" id="yYa-F9-8cD"/>
+                                    <constraint firstItem="BJU-lz-7lU" firstAttribute="leading" secondItem="AjE-yi-bBd" secondAttribute="leading" id="zIi-mG-DTn"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="iconView" destination="1Pw-u1-of9" id="53I-V3-2b5"/>
+                                    <outlet property="priceLabel" destination="GVY-Ue-KTF" id="qzi-X0-m9w"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterViewCache" id="cmh-b5-WSK" userLabel="Waterfall Flow Footer View" customClass="DMWaterfallFlowFooterView">
+                            <rect key="frame" x="0.0" y="188" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-Vi-IEf">
+                                    <rect key="frame" x="169" y="7" width="37" height="37"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="TjM-Vi-IEf" firstAttribute="centerX" secondItem="cmh-b5-WSK" secondAttribute="centerX" id="GMa-65-EG1"/>
+                                <constraint firstItem="TjM-Vi-IEf" firstAttribute="centerY" secondItem="cmh-b5-WSK" secondAttribute="centerY" id="U2f-Qf-JHb"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="indicatorView" destination="TjM-Vi-IEf" id="3fE-HZ-g83"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="SBk-Vc-CZL" id="ohb-pd-mbK"/>
+                            <outlet property="delegate" destination="SBk-Vc-CZL" id="6GU-4a-r5q"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="waterfallFlowLayout" destination="hNn-an-7gU" id="5Fw-tX-i5D"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQM-6P-InE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>
